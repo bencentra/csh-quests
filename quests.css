@@ -1,0 +1,221 @@
+/*
+* General page styles
+*/
+
+* {
+	font-family: Arial, sans-serif;
+}
+body {
+	background-color: #DDDDDD;
+	margin: 10px;
+}
+#wrapper {
+	min-width: 450px;
+	max-width: 900px;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+header {
+	width: 100%;
+	background-color: #222222;
+	color: #FFFFFF;
+}
+#page-title {
+	float: left;
+	position: relative;
+	left: 20px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#navbar {
+	text-align: right;
+	float: right;
+	position: relative;
+	left: -20px;
+}
+#navbar ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+#navbar ul li {
+	display: inline;
+	float: left;
+	font-size: .95em;
+}
+.navitem {
+	display: block;
+	text-align: center;
+	padding: 14px 20px 14px 20px;
+	background-color: #222222;
+	color: white;
+	text-decoration: none;
+}
+.navitem:link, .navitem:visited {
+	background-color: #222222;
+}
+.navitem:active, .navitem:hover {
+	background-color: #333333;
+}
+section {
+	display: block;
+	text-align: center;
+}
+#left {
+	float: left;
+	width: 50%;
+	margin: 0;
+}
+#right {
+	float: right;
+	width: 50%;
+	margin: 0;
+}
+#quest {
+	width: 100%;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+}
+#quest-button {
+	width: 200px;
+	height: 75px;
+	margin: auto;
+	margin-top: 15px;
+	font-size: 1.2em;
+	font-weight: bold;
+	cursor: pointer;
+}
+#quest-name {
+	width: 75%;
+	margin: auto;
+	display: block;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 5px;
+	border-bottom: 1px solid #DDDDDD;
+}
+#quest-info {
+	width: 90%;
+	margin: auto;
+	margin-top: 10px;
+	font-size: 1.25em;
+}
+#options {
+	width: 320px;
+	margin: auto;
+	background-color: #DDDDDD;
+	padding: 1px;
+	margin-top: 50px;
+}
+#newQuestCount {
+	width: 40px;
+	padding: 4px;
+}
+#newQuestButton {
+	padding: 4px;
+}
+footer {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+	padding: 5px;
+	border-top: 1px solid #DDDDDD;
+	font-size: .9em;
+}
+#bottom {
+	width: 100%;
+	height: 12px;
+	background-color: #222222;
+}
+.clearfix {
+	clear: both;
+}
+.bold {
+	font-weight: bold;
+}
+h2 {
+	margin-left: 20px;
+}
+
+/*
+* Media queries for element resizing
+*/
+
+/* Large desktop */
+/*@media (min-width: 960px), (min-device-width: 960px) { 
+	body {
+		margin: 6px;
+	}
+	.navitem {
+		padding: 14px 20px 14px 20px;
+		text-decoration: none;
+	}
+	#left {
+		float: left;
+		width: 60%;
+		margin: 0;
+	}
+	#right {
+		float: right;
+		width: 40%;
+		margin: 0;
+	}
+}*/
+/* Portrait tablet to landscape and desktop */
+/*@media (min-width: 768px) and (max-width: 959px), (min-device-width: 768px) and (max-device-width: 99px) { 
+	body {
+		background-color: #FF0000;
+	}
+}*/
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px), (max-device-width: 767px) { 
+	body {
+		margin: 0;
+	}
+	.navitem {
+		text-decoration: underline;
+	}
+	#quest {
+		margin-top: 25px;
+	}
+	#options {
+		margin-top: 25px;
+	}
+	#left {
+		float: none;
+		width: 90%;
+		margin: auto;
+	}
+	#right {
+		float: none;
+		width: 90%;
+		margin: auto;
+	}
+	#newQuestCount {
+		width: 40px;
+		padding: 8px;
+	}
+	#newQuestButton {
+		padding:8px;
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px), (max-device-width: 480px) { 
+	body {
+		margin: 0;
+	}
+	#page-title {
+		left: 10px;
+	}
+	#navbar {
+		left: -10px;
+	}
+	.navitem {
+		padding: 14px 10px 14px 10px;
+		text-decoration: underline;
+	}
+}
