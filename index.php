@@ -51,12 +51,12 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div id="wrapper">
 	<header>
-		<span id="page-title">CSH Quests!</span>
+		<a href="index.php"><span id="page-title">CSH Quests!</span></a>
 		<nav id="navbar">
 			<ul>
-				<li><a class="navitem" href="#">Home</a></li>
-				<li><a class="navitem" href="#">Add Quest</a></li>
-				<li><a class="navitem" href="#">All Quests</a><li>
+				<li><a class="navitem navitem-current" href="index.php">Home</a></li>
+				<li><a class="navitem" href="addquest.php">Add Quest</a></li>
+				<li><a class="navitem" href="allquests.php">All Quests</a><li>
 			</ul>
 		</nav>
 		<br class="clearfix"/>
