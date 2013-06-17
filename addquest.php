@@ -73,7 +73,7 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 				<label for="add_name">Quest Title:</label>
 			</div>
 			<div class="form-field">
-				<input type="text" id="add_name" name="add_name" maxlength="100"/>
+				<input type="text" id="add_name" name="add_name" maxlength="100" required/>
 				<br/>
 				<span class="small">(100 Characters Max)</span>
 			</div>
@@ -83,7 +83,7 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 				<label for="add_info">Quest Info:</label>
 			</div>
 			<div class="form-field">
-				<textarea id="add_info" name="add_info" maxlength="100"></textarea>
+				<textarea id="add_info" name="add_info" maxlength="100" required></textarea>
 				<br/>
 				<span class="small">(255 Characters Max)</span>
 			</div>

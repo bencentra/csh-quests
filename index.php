@@ -62,6 +62,9 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 		<br class="clearfix"/>
 	</header>
 	<br/>
+	<section id="main">
+		<h2>Quest Spinner</h2>
+	</section>
 	<section id="left">
 	<div>
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="400">

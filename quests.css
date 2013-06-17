@@ -177,6 +177,33 @@ textarea {
 button:hover, input[type="submit"]:hover {
 	background-color: #CCDDFF;
 }
+#quests {
+	width: 90%;
+	margin: auto;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+#quests tr:nth-child(even) {
+	background-color: #DDEEFF;
+	margin: 0;
+}
+#quests th {
+	border-bottom: 1px solid #222222;
+	padding: 12px;
+	padding-top: 0px;
+	margin: 0;
+}
+#quests td {
+	padding: 12px;
+	margin: 0;
+	font-size: .95em;
+}
+#quests th:nth-child(1), #quests td:nth-child(1) {
+	padding: 6px;
+}
+.page {
+	padding: 5px;
+}
 footer {
 	width: 90%;
 	margin: auto;
@@ -199,6 +226,9 @@ footer {
 }
 .small {
 	font-size: .9em;
+}
+h2 {
+	margin-top: 0;
 }
 
 /*
