@@ -10,8 +10,8 @@ body {
 	margin: 10px;
 }
 #wrapper {
-	min-width: 450px;
-	max-width: 900px;
+	min-width: 320px;
+	max-width: 960px;
 	margin: auto;
 	background-color: #FFFFFF;
 }
@@ -110,7 +110,7 @@ section {
 #options {
 	width: 320px;
 	margin: auto;
-	background-color: #DDDDDD;
+	background-color: #EEEEEE;
 	padding: 1px;
 	margin-top: 50px;
 	border-radius: 5px;
@@ -128,7 +128,8 @@ section {
 .alert {
 	width: 90%;
 	margin: auto;
-	padding: 5px;
+	margin-bottom: 10px;
+	padding: 6px;
 	border-radius: 5px;
 	font-size: .9em;
 	cursor: pointer;

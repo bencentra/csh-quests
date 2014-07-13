@@ -20,8 +20,8 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 <head>
 	<title>CSH Quest Picker</title>
 	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" type="text/css" href="quests.css"/>
-	<!--<script type="text/javascript" src="quests.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="css/quests.css"/>
+	<!--<script type="text/javascript" src="js/quests.js"></script>-->
 	<script type="text/javascript">	
 		document.addEventListener("DOMContentLoaded", function() {
 			var alerts = document.querySelectorAll(".alert");
@@ -37,7 +37,7 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 <body>
 <div id="wrapper">
 	<header>
-		<a href="index.php"><span id="page-title">CSH Quests!</span></a>
+		<a href="index.php"><span id="page-title">CSH Quests</span></a>
 		<nav id="navbar">
 			<ul>
 				<li><a class="navitem" href="index.php">Home</a></li>
@@ -95,6 +95,7 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 	<br class="clearfix"/>
 	<footer>
 		<p>Made by Ben Centra.</p>
+		<p><a href="#">Check out the Quests API!</a></p>
 	</footer>
 	<div id="bottom"></div>
 </div>

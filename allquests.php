@@ -20,7 +20,8 @@ if (isset($_GET['n'])) {
 
 // Get the total number of quests 
 $result = $pdo->query("SELECT COUNT(*) AS count FROM quests");
-$totalQuests = $result->fetch(PDO::FETCH_ASSOC)["count"];
+$totalQuests = $result->fetch(PDO::FETCH_ASSOC);
+$totalQuests = $totalQuests["count"];
 
 // Retrieve the quest info
 $result = $pdo->query("SELECT * FROM quests ORDER BY ts ASC LIMIT ".($page-1)*$numQuests.", ".$numQuests);
@@ -67,8 +68,8 @@ function createPageSelector($numQuests, $page, $totalQuests) {
 <head>
 	<title>CSH Quest Picker</title>
 	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" type="text/css" href="quests.css"/>
-	<!--<script type="text/javascript" src="quests.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="css/quests.css"/>
+	<!--<script type="text/javascript" src="js/quests.js"></script>-->
 	<script type="text/javascript">	
 		
 	</script>
@@ -76,7 +77,7 @@ function createPageSelector($numQuests, $page, $totalQuests) {
 <body>
 <div id="wrapper">
 	<header>
-		<a href="index.php"><span id="page-title">CSH Quests!</span></a>
+		<a href="index.php"><span id="page-title">CSH Quests</span></a>
 		<nav id="navbar">
 			<ul>
 				<li><a class="navitem" href="index.php">Home</a></li>
@@ -105,6 +106,7 @@ function createPageSelector($numQuests, $page, $totalQuests) {
 	<br class="clearfix"/>
 	<footer>
 		<p>Made by Ben Centra.</p>
+		<p><a href="#">Check out the Quests API!</a></p>
 	</footer>
 	<div id="bottom"></div>
 </div>

@@ -24,8 +24,8 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 <head>
 	<title>CSH Quest Picker</title>
 	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" type="text/css" href="quests.css"/>
-	<script type="text/javascript" src="quests.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/quests.css"/>
+	<script type="text/javascript" src="js/quests.js"></script>
 	<script type="text/javascript">	
 		// Set some variables
 		quests = <?php echo json_encode($quests); ?>; 
@@ -51,7 +51,7 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div id="wrapper">
 	<header>
-		<a href="index.php"><span id="page-title">CSH Quests!</span></a>
+		<a href="index.php"><span id="page-title">CSH Quests</span></a>
 		<nav id="navbar">
 			<ul>
 				<li><a class="navitem navitem-current" href="index.php">Home</a></li>
@@ -91,6 +91,7 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 	<br class="clearfix"/>
 	<footer>
 		<p>Made by Ben Centra.</p>
+		<p><a href="#">Check out the Quests API!</a></p>
 	</footer>
 	<div id="bottom"></div>
 </div>
