@@ -50,13 +50,6 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 	<br/>
 	<section id="main">
 		<?php 
-			// If the user hasn't been here before, display the warning message
-			if (!isset($_COOKIE['csh_quests'])) {
-				echo '<div class="alert info">Before adding a quest, look through the <a href="allquests.php">list of quests</a> to see if it has already been added!</div>';
-				// Set a cookie so the user doesn't see the message again 
-				setcookie("csh_quests", "true", time() + 60 * 60 * 24 * 360);
-			} 
-
 			// If the form was just submitted, show a success or error message
 			if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 				if ($result) {
@@ -67,6 +60,7 @@ if (isset($_POST['add_name']) && isset($_POST['add_info'])) {
 				}
 			}
 		?>
+		<div class="alert info">Before adding a quest, look through the <a href="allquests.php">list of quests</a> to see if it has already been added!</div>
 		<h2>Add a New Quest</h2>
 		<form action="addquest.php" method="POST" id="add_form">
 			<div class="form-label">
