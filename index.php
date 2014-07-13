@@ -3,6 +3,7 @@
 require_once("../../quests_db_info.inc");
 
 // Determine how many quests to get
+$numQuests = 6;
 if (isset($_GET['n'])) {
 	$numQuests = $_GET['n'];
 	if ($numQuests > 12) {
@@ -10,8 +11,6 @@ if (isset($_GET['n'])) {
 	} else if ($numQuests < 3) {
 		$numQuests = 3;
 	}
-} else {
-	$numQuests = 6;
 }
 
 // Get some random quests
@@ -31,6 +30,8 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 		quests = <?php echo json_encode($quests); ?>; 
 		numSlices = <?php echo $numQuests; ?>
 
+		console.log(quests);
+
 		document.addEventListener("DOMContentLoaded", function() {
 			// Get a handle to all necessary DOM elements
 			wheel = document.getElementById("spinner-board"); // DOM Object for the spinner board
@@ -45,6 +46,12 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 			// Highlight the first slice
 			slices[0].toggleOverlay();
 		}, false);
+
+		function getRandomQuest() {
+			var rando = Math.floor(Math.random() * quests.length);
+			questName.innerHTML = quests[rando].name;
+			questInfo.innerHTML = quests[rando].info;
+		}
 
 	</script>
 </head>
@@ -83,6 +90,8 @@ $quests = $result->fetchAll(PDO::FETCH_ASSOC);
 			<span id="quest-name">Hello There!</span>
 			<p id="quest-info">Hit the big button to start the spinner and get your quest!</p>
 		</div>
+		<br/>
+		<p><button onclick="getRandomQuest();">Just Give Me a Quest!</button></p>
 		<div id="options">
 			<p>Reload with <input type="number" id="newQuestCount" value="<?php echo $numQuests; ?>" size="1" min="3" max="12"/> new quests: <button id="newQuestButton" onclick="generateNewQuests();">Go!</button>
 		</div>

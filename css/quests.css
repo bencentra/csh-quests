@@ -231,6 +231,9 @@ footer {
 h2 {
 	margin-top: 0;
 }
+button, input[type=submit] {
+	cursor: pointer;
+}
 
 /*
 * Media queries for element resizing
