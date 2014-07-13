@@ -106,7 +106,7 @@ function createPageSelector($numQuests, $page, $totalQuests) {
 	<br class="clearfix"/>
 	<footer>
 		<p>Made by Ben Centra.</p>
-		<p><a href="#">Check out the Quests API!</a></p>
+		<p><a href="https://github.com/bencentra/csh-quests/blob/master/api/README.md">Check out the Quests API!</a></p>
 	</footer>
 	<div id="bottom"></div>
 </div>

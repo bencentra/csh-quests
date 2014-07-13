@@ -5,7 +5,8 @@ I've added a JSON API for getting, adding, editing, and deleting quests. Request
 
 There is currently no API key or authentication, but Webauth prevents non-CSHers from using it; they can't even reach the API.
 
-The following methods are supported:
+Methods:
+--------
 
 ### GET api/quests/get
 
